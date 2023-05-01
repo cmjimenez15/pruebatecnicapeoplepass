@@ -29,14 +29,22 @@ public class Cadena {
         System.out.println("la cadena en mayuscula es "+cadmay);
         String cadmin = cadena.toLowerCase();
         System.out.println("la cadena en minuscula es "+cadmin);
-        int caracocu = 0;
-        char temp;
-        for (int i = 0; i < cadena.length(); i++) {
-            temp = cadena.charAt(i);
-            if (temp == cadena.charAt(cadena.length()-1));
-                caracocu++;
+        char ultCarac = cadena.charAt(cadena.length()-1);
+        int contUltCarac = 0;
+        for(int i=0; i<cadena.length(); i++) {
+            if(cadena.charAt(i) == ultCarac) {
+                contUltCarac++;
+            }
         }
-        System.out.println("la ocurrencia del ultimo caracter es "+caracocu);
+        System.out.println("la ocurrencia del ultimo caracter es "+contUltCarac);
+        
+        System.out.println("la cadena con 3 asteriscos por delante y por detrás: ***" + cadena + "***");
+        
+        String cadenaInv = "";
+        for(int i=cadena.length()-1; i>=0; i--) {
+            cadenaInv += cadena.charAt(i);
+        }
+        System.out.println("la cadena invertida: " + cadenaInv);
         // TODO code application logic here
     }
     
