@@ -9,6 +9,23 @@ package cuentas;
  *
  * @author Rentadvisor
  */
-public class cuenta_Ahorro {
+public class cuenta_Ahorro extends cuenta_corriente{
+    
+    private double interes;
+    
+   public cuenta_Ahorro(String cuenta, long saldo, double interes) {
+        super(cuenta, saldo);
+        this.interes = interes;
+    }
+
+    public cuenta_Ahorro(String cuenta, long saldo) {
+        super(cuenta, saldo);
+        this.interes = 15.3;
+    }
+    
+       public void calcularInteres() {
+        double interesCalculado = getSaldo() * (interes / 100);
+        ingresar((long) interesCalculado);
+    }
     
 }
