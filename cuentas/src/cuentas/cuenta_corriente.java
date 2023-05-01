@@ -18,16 +18,16 @@ public class cuenta_corriente {
      private String número_de_cuenta;
      private long saldo; 
      
-    public void ingresar(long valor){
-         this.saldo = saldo+valor;
+    public void ingresar(long cantidad){
+        saldo += cantidad;
     }
     
-    public void reintegro(long valor){
-         this.saldo = saldo-valor;
+    public void reintegro(long cantidad){
+          saldo -= cantidad;
     }
     
     public String concatenar (){
-         return this.número_de_cuenta+this.saldo;
+         return "Número de cuenta: " + número_de_cuenta + ", Saldo: " + saldo;
     }
      
     public cuenta_corriente(String nombre, String apellidos, int edad, String número_de_cuenta, long saldo) {
